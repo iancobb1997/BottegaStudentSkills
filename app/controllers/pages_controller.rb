@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  access all: [:landing_page], [:user, :admin] => :all
   def index
     if fetch_params
       User.reindex
@@ -8,6 +9,9 @@ class PagesController < ApplicationController
     else
       @users = User.all
     end
+  end
+
+  def landing_page
   end
 
   def user_show

@@ -1,3 +1,57 @@
 @import "materialize_style.scss";
 @import "pages.scss";
 @import "gritter";
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('BnW.jpg') no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  margin-left: 40px;
+  margin-top: 15px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.nav-link {
+  font-family: 'Amaranth', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem,0,4;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgba(255,255,255,.5);
+  margin-left: 1rem;
+  float: left;
+  padding: 3rem;
+  display: inline-block;
+  width: 100%;
+  padding-left: 200px;
+  margin-top: -127px;
+}
+
+.nav-link a {
+  color: white;
+  text-decoration: none;
+  padding: .5rem;
+}
+
+.nav-link a:hover {
+  color: rgb(84, 88, 99);
+}
+
+#login { 
+  padding-left: 800px;
+  }
+

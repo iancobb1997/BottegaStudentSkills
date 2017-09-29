@@ -23,7 +23,7 @@
           </div>
           <div class="card-content">
             <div class>
-              <%= user.name %>
+              <%= link_to user.name, show_path(user), id: "show_#{user.id}" %>
             </div>
             <div class="card-action">
               <%= user.skills %>

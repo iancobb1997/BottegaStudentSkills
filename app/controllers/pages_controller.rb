@@ -1,9 +1,14 @@
 class PagesController < ApplicationController
   def index
-    @users = User.all
+    if params[:q]
+      # @users = User.where("skills LIKE '%#{params[:q]}%'")
+      @users = User.search "ruby"
+    else
+      @users = User.all
+    end
   end
 
   def user_show
-    @user = User.find(params[:id])
+    @user = User.find(params[:q])
   end
 end

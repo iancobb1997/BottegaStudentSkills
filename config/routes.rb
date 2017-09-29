@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
         sessions: 'users/sessions'
       }
-      
+
+  get 'index', to: "pages#index", as: "pages_index"
   get "show/:id", to: "pages#user_show", as: "show"
-  root to: "pages#index"
+  root to: "pages#landing_page"
 end

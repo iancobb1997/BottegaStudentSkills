@@ -3,64 +3,16 @@
   <head>
     <title>BottegaStudentSkills</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
-
-
-         <%= video_tag(
-              'BnW.mp4',
-              id: 'background',
-              autoplay: true,
-              loop: true,
-              muted: true, 
-              poster: 'BnW.jpg'
-            )
-            %>
-
-            <style>
-              @import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto');
-            </style>
-  
-    <div class="logo">
-        <%= image_tag("devcamplogo.png", size: "152x43", :alt => "devcamp") %>
-      </div>
-
-    <div class="nav-link">
-      <div>
-        <a href="#">
-          <span class="button">Apply to Bootcamp</span>
-        </a>
-
-        <a href="#">
-          <span class="button">Blog</span>
-        </a>
-        
-        <a href="#">
-          <span class="button">Contact Us</span>
-        </a>
-
-        
-        
-        <a href="#">
-          <span class="button" id="login">
-            <% if current_user.is_a?(User)%>
-              <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-            <% else %>
-              <%= link_to 'Log In', new_user_session_path %>  
-            <% end %>
-          </span>
-        </a>
-          </div>
-      </div>
-
-
-    </div>
-  
-
+    <%= render 'shared/nav'%>
+    <%= js add_gritter(flash[:notice], :image => :notice, :title => "Devcamp", :time => 1000) %>
+    <%= js add_gritter(flash[:alert], :image => :notice, :title => "Devcamp", :time => 1000) %>
+    <%= js add_gritter(flash[:error], :image => :notice, :title => "Devcamp", :time => 1000) %>
     <%= yield %>
   </body>
 </html>

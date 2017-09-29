@@ -1,8 +1,10 @@
 class PagesController < ApplicationController
   def index
     if fetch_params
-      @users = User.where("LOWER(skills) LIKE '%#{fetch_params.downcase}%'")
-      # @users = User.search "ruby"
+      User.reindex
+      @users = User.search(fetch_params,
+                            fields: ["skills", "name"]
+                          )
     else
       @users = User.all
     end

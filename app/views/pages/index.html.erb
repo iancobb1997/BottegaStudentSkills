@@ -15,7 +15,9 @@
   <div class="col s1">
   </div>
   <div class="col s10">
+  
     <% @users.each do |user| %>
+    <% unless user.roles == [:admin, :user] %>
       <div class="col s12 m3">
         <div class="card">
           <div class="card-image">
@@ -31,6 +33,7 @@
           </div>
         </div>
       </div>
+      <% end %>
       <% end %>
   </div>
   <div class="col s1">

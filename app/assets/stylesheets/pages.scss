@@ -17,7 +17,7 @@
 
 // BODY
 
-#name { 
+#name {
   text-align: center;
 }
 
@@ -25,10 +25,15 @@
   padding: 45px;
 }
 
-.card-content { 
+.card-content {
+
+}
+
+.other-card {
   text-align: center;
   height: 200px;
   max-width: 300px;
+
 }
 
 .avatar {
@@ -71,7 +76,7 @@
   margin: 70px auto;
   width: 80%;
   height: 2px;
-  border-top-color: black; 
+  border-top-color: black;
   border-bottom-color: black;
   position: relative;
   bottom: 55px;

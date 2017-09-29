@@ -18,13 +18,16 @@
     <% @users.each do |user| %>
       <div class="col s12 m3">
         <div class="card">
+          <div class="card-image">
+            <%= image_tag 'images.jpeg' %>
+          </div>
           <div class="card-content">
             <div class>
-              Skill1 Skill2
+              <%= user.name %>
             </div>
             <div class="card-action">
-              <%= user.email %>
-              <%= user.skills %>
+              Skill 1 | Skill 2 | Skill 3
+              Skill 4 | Skill 5 | Skill 6
             </div>
           </div>
         </div>

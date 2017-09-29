@@ -31,9 +31,6 @@
           <%= image_tag 'images.jpeg' %>
         </div>
         <div class="card-content" id="name">
-          <div class>
-            <%= user.name %>
-          </div>
           <div class="card-content">
             <div class>
               <%= link_to user.name, show_path(user), id: "show_#{user.id}" %>

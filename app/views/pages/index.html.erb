@@ -1,6 +1,36 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
-<% @users.each do |user|%>
-<%= link_to "#{user.email}", show_path(user) %>
-<% end %>
-<%= link_to "Logout", destroy_user_session_path, method: :delete %> 
+<div class="container">
+  <nav class="white">
+    <div class="nav-wrapper">
+      <form action="" method="get">
+        <div class="input-field col s6 s12">
+          <i class="black-text material-icons prefix">search</i>
+          <input type="text" placeholder="I'm looking for a programmer in..." id="address" class="autocomplete red-text search-programmer"
+            name="location" value="" required>
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>
+
+<div class="row">
+  <div class="col s1">
+  </div>
+  <div class="col s10">
+    <% @users.each do |user| %>
+      <div class="col s12 m3">
+        <div class="card">
+          <div class="card-content">
+            <div class>
+              Skill1 Skill2
+            </div>
+            <div class="card-action">
+              <%= user.email %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+  <div class="col s1">
+  </div>
+</div>

@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+```ruby
+<% if params %>
+  <% @users.each_with_index do |article, i| %>
+  <p><%= @users.response["hits"]["hits"][i]["_score"] %></p>
+  <% end %>
+<% end %>
+```

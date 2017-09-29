@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col s2">
       <div id="devcamp_logo">
-        <%= image_tag("devcamplogo.svg", :alt => "devcamp") %>
+        <%= link_to image_tag("devcamplogo.svg", :alt => "devcamp"), root_path %>
       </div>
     </div>
     <div class="col s8">
@@ -11,6 +11,7 @@
     <div class="col s2">
       <div class="login-logout">
         <% if current_user.is_a?(User)%>
+          <%= link_to "Admin Dashboard", admin_users_path if logged_in?(:admin) %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
         <% else %>
           <%= link_to 'Login', new_user_session_path %>

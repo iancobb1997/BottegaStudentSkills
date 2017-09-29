@@ -9,7 +9,7 @@ class UserDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    email: Field::String,
+    email: Field::String.with_options(searchable: true),
     password: Field::String,
     reset_password_token: Field::String,
     reset_password_sent_at: Field::DateTime,
@@ -23,6 +23,9 @@ class UserDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime,
     roles: Field::String,
     skills: Field::Text,
+    phone: Field::String,
+    address: Field::Text,
+    name: Field::String.with_options(searchable: true),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -32,8 +35,7 @@ class UserDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :email,
-    :skills,
+    :name,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -41,11 +43,12 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :email,
-    :sign_in_count,
-    :created_at,
-    :updated_at,
+    :password,
     :roles,
     :skills,
+    :phone,
+    :address,
+    :name,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -56,6 +59,9 @@ class UserDashboard < Administrate::BaseDashboard
     :password,
     :roles,
     :skills,
+    :phone,
+    :address,
+    :name,
   ].freeze
 
   # Overwrite this method to customize how users are displayed

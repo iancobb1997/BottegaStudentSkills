@@ -3,7 +3,6 @@
   <head>
     <title>BottegaStudentSkills</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,7 +10,9 @@
 
   <body>
     <%= render 'shared/nav'%>
-    
+    <%= js add_gritter(flash[:notice], :image => :notice, :title => "Devcamp", :time => 1000) %>
+    <%= js add_gritter(flash[:alert], :image => :notice, :title => "Devcamp", :time => 1000) %>
+    <%= js add_gritter(flash[:error], :image => :notice, :title => "Devcamp", :time => 1000) %>
     <%= yield %>
   </body>
 </html>

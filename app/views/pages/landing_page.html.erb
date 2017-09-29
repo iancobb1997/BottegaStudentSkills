@@ -1,0 +1,55 @@
+<%= video_tag(
+     'BnW.mp4',
+     id: 'background',
+     autoplay: true,
+     loop: true,
+     muted: true,
+     poster: 'BnW.jpg'
+   )
+   %>
+
+   <style>
+     @import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto');
+   </style>
+
+<div class="logo">
+<%= image_tag("devcamplogo.png", size: "152x43", :alt => "devcamp") %>
+</div>
+
+<div class="nav-link">
+<div>
+<a href="#">
+ <span class="button">Apply to Bootcamp</span>
+</a>
+
+<a href="#">
+ <span class="button">Blog</span>
+</a>
+
+<!-- <a href="#">
+ <span class="button">Bottega Students</span>
+</a> -->
+
+
+<%= link_to 'Students', pages_index_path %>
+
+
+
+<a href="#">
+ <span class="button" id="login">
+   <% if current_user.is_a?(User)%>
+     <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+   <% else %>
+     <%= link_to 'Log In', new_user_session_path %>
+   <% end %>
+ </span>
+</a>
+ </div>
+</div>
+
+
+</div>
+
+<script>
+  $("#logged-in-nav").hide();
+</script>

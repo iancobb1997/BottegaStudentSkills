@@ -9,11 +9,10 @@
 }
 
 #devcamp_logo img {
-margin: 10px;
-width: 152px;
-height: 43px;
+  margin: 10px;
+  width: 152px;
+  height: 43px;
 }
-
 
 
 // BODY
@@ -26,3 +25,80 @@ height: 43px;
   padding: 45px;
 }
 
+.card-content { 
+  text-align: center;
+  height: 200px;
+  max-width: 300px;
+}
+
+.avatar {
+  float: left;
+  max-height: 50px;
+  max-width: 50px;
+  padding-left: 5px;
+  padding-top: 5px;
+
+}
+
+#user {
+  position: absolute;
+  right: 0px;
+}
+
+.name {
+  float: right;
+  max-width: 100px;
+}
+
+.card-action {
+  margin-top: 15%;
+}
+
+.card-image a {
+  margin-top: 8%;
+  margin-right: 35%;
+}
+
+// USER SHOW
+
+#name {
+  text-align: center;
+  padding: 15px;
+}
+
+.divider {
+  display: block;
+  margin: 70px auto;
+  width: 80%;
+  height: 2px;
+  border-top-color: black; 
+  border-bottom-color: black;
+  position: relative;
+  bottom: 55px;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  width: 80%;
+}
+
+.vl {
+  border-left: 1px solid black;
+  height: 600px;
+  margin-left: 100%;
+}
+
+#skills-show {
+  text-align: center;
+}
+
+#avatar-show {
+  width: 100px;
+  height: 100px;
+}

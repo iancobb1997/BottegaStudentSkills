@@ -15,13 +15,17 @@
   <div class="col s1">
   </div>
   <div class="col s10">
-  
+
     <% @users.each do |user| %>
     <% unless user.roles == [:admin, :user] %>
-      <div class="col s12 m3">
-        <div class="card">
-          <div class="card-image">
-            <%= image_tag 'images.jpeg' %>
+    <div class="col s12 m3">
+      <div class="card">
+        <div class="card-image">
+          <%= image_tag 'images.jpeg' %>
+        </div>
+        <div class="card-content" id="name">
+          <div class>
+            <%= user.name %>
           </div>
           <div class="card-content">
             <div class>
@@ -33,8 +37,9 @@
           </div>
         </div>
       </div>
-      <% end %>
-      <% end %>
+    </div>
+    <% end %>
+    <% end %>
   </div>
   <div class="col s1">
   </div>

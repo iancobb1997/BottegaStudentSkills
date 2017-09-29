@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
 
   def user_show
-    @user = User.find(fetch_params)
+    @user = User.find(params[:id])
   end
 
   private

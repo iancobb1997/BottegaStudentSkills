@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   def index
     if params[:q]
-      # @users = User.where("skills LIKE '%#{params[:q]}%'")
       @users = User.search "ruby"
     else
       @users = User.all

@@ -1,61 +1,39 @@
 <div class="container">
-  <div class="col s2">
+  <nav class="white">
+    <div class="nav-wrapper">
+      <form action="" method="get">
+        <div class="input-field col s6 s12">
+          <i class="black-text material-icons prefix">search</i>
+          <input type="text" placeholder="I'm looking for a programmer in..." id="q" class="autocomplete red-text search-programmer" name="q" value="<%= params[:q] %>" required>
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>
+
+<div class="row">
+  <div class="col s1">
   </div>
-
-  <div class="col s8">
-    <nav class="white">
-      <div class="nav-wrapper">
-        <form action="" method="get">
-          <div class="input-field col s6 s12">
-            <i class="black-text material-icons prefix">search</i>
-            <input type="text" placeholder="I'm looking for a programmer in..." id="address" class="autocomplete red-text search-programmer"
-              name="location" value="" required>
-          </div>
-        </form>
-    </nav>
-
-    <div class="row">
-      <div class="col s12 m5">
+  <div class="col s10">
+    <% @users.each do |user| %>
+      <div class="col s12 m3">
         <div class="card">
+          <div class="card-image">
+            <%= image_tag 'images.jpeg' %>
+          </div>
           <div class="card-content">
             <div class>
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                little markup to use effectively.</p>
+              <%= user.name %>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              Skill 1 | Skill 2 | Skill 3
+              Skill 4 | Skill 5 | Skill 6
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-content">
-            <div class>
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <div class>
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-
       </div>
-
-    </div>
-
-
-    <div class="col s3">
-    </div>
-    </div>
-
+      <% end %>
+  </div>
+  <div class="col s1">
+  </div>
+</div>

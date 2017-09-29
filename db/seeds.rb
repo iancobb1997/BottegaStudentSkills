@@ -8,11 +8,12 @@
 
 skill_array = ["ruby", "Rails", "SQL", "HTML", "Angular", "CSS"]
 
-10.times do |u|
+12.times do |u|
   User.create!(
     email: "user#{u}@user.com",
     skills: skill_array.sample,
-    password: "asdfasdf"
+    password: "asdfasdf",
+    name: "Student #{u}"
   )
 end
 
@@ -22,7 +23,8 @@ puts "10 users created"
   User.create!(
     email: "admin#{a}@admin.com",
     password: "asdfasdf",
-    roles: "admin"
+    roles: "admin",
+    name: "Admin #{a}"
   )
 end
 

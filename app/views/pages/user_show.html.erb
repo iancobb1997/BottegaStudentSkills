@@ -1,1 +1,22 @@
-<%= @user.inspect %>
+<div class="row">
+  <div class="container">
+
+    <div class="card large">
+      <h2 class="header-card" id="name">
+        <%= @user.name %>
+          <hr>
+      </h2>
+      <div class="card-stacked">
+        <div class="card-content">
+        <%= image_tag 'images.jpeg', id: 'avatar-show' %>
+        <div id="skills-show">
+          <%= @user.skills %>
+        </div>
+          
+          <div class="vl"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

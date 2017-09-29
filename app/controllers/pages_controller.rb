@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  access all: [:index], [:user, :admin] => :all
   def index
     if fetch_params
       User.reindex

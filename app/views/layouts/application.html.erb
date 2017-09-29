@@ -11,7 +11,9 @@
 
   <body>
     <%= render 'shared/nav'%>
-    
+    <%= js add_gritter(flash[:notice], :image => :notice, :title => "Devcamp", :time => 1000) %>
+    <%= js add_gritter(flash[:alert], :image => :notice, :title => "Devcamp", :time => 1000) %>
+    <%= js add_gritter(flash[:error], :image => :notice, :title => "Devcamp", :time => 1000) %>
     <%= yield %>
   </body>
 </html>
